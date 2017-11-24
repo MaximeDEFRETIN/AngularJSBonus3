@@ -16,5 +16,7 @@
 </form>
 <!--permet de faire apparaitre la liste des sujets récupérés dans l'input subject-->
 <ul>
-  <li ng-repeat="subjectDetails in subjectList"><a href="#!/view/{{subjectDetails}}">{{subjectDetails}}</a></li>
+  <!--grâce à {{$index}} on va recupérer la ligne du tableau-->
+  <li ng-repeat="subjectDetails in subjectList"><a href="#!/view/{{$index}}">{{subjectDetails}}</a></li>
 </ul>
+{{toto}}
