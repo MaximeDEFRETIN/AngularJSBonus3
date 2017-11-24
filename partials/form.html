@@ -1,0 +1,20 @@
+<form>
+  <!--Nom-->
+  <label for="name">Votre Nom</label>
+  <input type="text" name="name" placeholder="nom" ng-model="name"/>
+  <!--Adresse mail-->
+  <label for="email">Votre adresse mail</label>
+  <input type="email" name="email" placeholder="email" ng-model="email"/>
+  <!--Sujet-->
+  <label for="subject">Sujet</label>
+  <input type="text" name="subject" placeholder="sujet" ng-model="subject"/>
+  <!--Texte-->
+  <label for="text">Texte</label>
+  <textarea name="text" rows="8" cols="60" ng-model="text"></textarea>
+  <!--Bouton envoyer-->
+  <button type="button" name="send" ng-click="sendClick()">Envoyer</button>
+</form>
+<!--permet de faire apparaitre la liste des sujets récupérés dans l'input subject-->
+<ul>
+  <li ng-repeat="subjectDetails in subjectList"><a href="#!/view/{{subjectDetails}}">{{subjectDetails}}</a></li>
+</ul>
